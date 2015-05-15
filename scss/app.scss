@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+@import "../vendor/bower/materialize/sass/components/color";
+
+// Global Settings
+@import "extra/app_settings";
+
+@import "../vendor/bower/normalize-scss/normalize";
+@import "../vendor/bower/materialize/sass/materialize";
+
+// Helper
+@import "extra/helper";
+
+// Base Styles
+@import "extra/base";
+@import "extra/fonts";
+
+// Sections
+@import "sections/header";
+@import "sections/sidebar";
+@import "sections/footer";
+

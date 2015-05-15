@@ -1,0 +1,108 @@
+{
+    "patterns": [{
+        "index": 0,
+        "shortcut": "abstract_factory",
+        "languages": [
+          {
+            "de": [{
+              "language_short": "de",
+              "language": "Deutsch",
+              "name": "Abstrakte Fabrik",
+              "category": "",
+              "purpose": "Der Konstrucktionsprozess von Familien verbundener oder abhäniger Klassen soll von der Repräsentation getrennt werden, um bei der Progrmmierung flexiebler beim erzeugen der ensprechenden Objekte zu sein.",
+              "general": "Anstatt eine Instanz einer Klasse direkt zu erstellen, nutzen wir eine abstrakte Klasse, welche wiederum von einer konkreten \"Factory\"-Klasse implemientiert wird. Diese Konkrete Klasse erstellt anschließend die eigentlich zu nutzenden Klasse.",
+              "technically": "Es werden verschiedene Schnittstellen zur Erzeugung von Objekten über abstrakte Klassen definiert, welche zum einen über eine abstrakte \"Faktory\" und zum anderen via abstrakte zu nutzende Klassen definiert werden.",
+              "advantage": "Durch die Schnittstellen wird der Programmcode unabhäniger von den konkreten Klassen und kann somit auch einfacher über z.B. Dummy-Klassen getestet werden.",
+              "disadvantage": "Bei der Erweiterung dieses Patterns durch weitere Klassen bzw. Methoden in den abstrakten Klassen wird es kompliziert, da viele Klassen betroffen sind.",
+              "example": "Wir möchten Kundendaten für ein E-Mail System importieren, dabei ist der eigentliche Import identisch, jedoch liefern die Kunden die zu importierenden Daten in unterschiedlichen Formaten an, so dass wir nicht die selbe Implementierung nutzen können.",
+              "tags": ["tag1", "tag2"]
+            }]
+          },
+          {
+            "en": [{
+              "language_short": "en",
+              "language": "English",
+              "name": "Abstract Factory",
+              "category": "",
+              "purpose": "",
+              "general": "",
+              "technically": "",
+              "advantage": "",
+              "disadvantage": "",
+              "example": "",
+              "tags": ["tag1", "tag2"]
+            }]
+          }
+        ]
+    }, {
+        "index": 1,
+        "shortcut": "factory",
+        "languages": [
+          {
+            "de": [{
+              "language_short": "de",
+              "language": "Deutsch",
+              "name": "Fabrik",
+              "category": "",
+              "purpose": "Der Konstruktionsprozess soll von der Repräsentation getrennt werden, um bei der Programmierung flexiebler beim erzeugen der entsprechenden Objekte zu sein.",
+              "general": "Anstatt eine Instanz einer Klasse direkt zu erstellen, rufen wir eine \"Factory\"-Klasse auf, welche wiederrum das eigentliche Objekt für uns erzeugt.",
+              "technically": "Es wird eine Schnittstelle zur Erzeugung von Objekten über eine abstrakte Klasse definiert. Die konkrete Klasse welche diese implementiert erzeugt wiederum über eine eigene Methode die eigentlich zu nutzende Klasse.",
+              "advantage": "Eine allgemeine Schnittstelle hilft bestimmte Klassen so zu programmieren, dass diese austauschbar bleiben, diese Eigenschaft einer Klasse ist mindestens genauso wichtig wie diese wiederverwendbar zu gestallten.",
+              "disadvantage": "Der \"Factory\"-Klasse ist meistens stark mit der endgültig zu erstellenden Klasse gekoppelt, so dass eine Änderung an einer der Klassen auch eine Änderung in der anderen Klasse zur Folge hat.",
+              "example": "Wir wollen zur Erstellung von HTML-Seieten eine Template-Software verwenden, jedoch möchten wir bei Änderungen der API möglichst wenig Änderugen in unserem eigenen System haben. Dafür erstellen wir eine Factory-Klasse welche wiederum verschiedene \"TemplateSoftware\"-Objekt erstellen kann. ",
+              "tags": ["tag1", "tag2"]
+            }]
+          },
+          {
+            "en": [{
+              "language_short": "en",
+              "language": "English",
+              "name": "Factory",
+              "category": "",
+              "purpose": "",
+              "general": "",
+              "technically": "",
+              "advantage": "",
+              "disadvantage": "",
+              "example": "",
+              "tags": ["tag1", "tag2"]
+            }]
+          }
+        ]
+    }, {
+        "index": 2,
+        "shortcut": "builder",
+        "languages": [
+          {
+            "de": [{
+              "language_short": "de",
+              "language": "Deutsch",
+              "name": "Erbauer",
+              "category": "",
+              "purpose": "",
+              "general": "",
+              "technically": "",
+              "advantage": "",
+              "disadvantage": "",
+              "example": "",
+              "tags": ["tag1", "tag2"]
+            }]
+          },
+          {
+            "en": [{
+              "language_short": "en",
+              "language": "English",
+              "name": "Builder",
+              "category": "",
+              "purpose": "",
+              "general": "",
+              "technically": "",
+              "advantage": "",
+              "disadvantage": "",
+              "example": "",
+              "tags": ["tag1", "tag2"]
+            }]
+          }
+        ]
+    }]
+}

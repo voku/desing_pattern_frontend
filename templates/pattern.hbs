@@ -1,0 +1,47 @@
+<script type="text/x-handlebars" data-template-name="pattern">
+
+  <nav class="content-nav" id="contentNav">
+    <ul>
+      <li class="active">
+        <a href="#" role="button">todo</a>
+      </li>
+      <li>
+        <a href="#" role="button">todo</a>
+      </li>
+      <li>
+        <a href="#" role="button">todo</a>
+      </li>
+      <li>
+        <a href="#" role="button">todo</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="content-container">
+    <div class="content-text">
+      {{#each item in model}}
+        <h2>{{item.currentLang.name}}</h2>
+
+        <p class="pattern-purpose">
+          {{item.currentLang.purpose}}
+        </p>
+        <p class="pattern-general">
+          {{item.currentLang.general}}
+        </p>
+        <p class="pattern-technically">
+          {{item.currentLang.technically}}
+        </p>
+        <p class="pattern-advantage">
+          {{item.currentLang.advantage}}
+        </p>
+        <p class="pattern-disadvantage">
+          {{item.currentLang.disadvantage}}
+        </p>
+        <p class="pattern-example">
+          {{item.currentLang.example}}
+        </p>
+      {{/each}}
+    </div>
+  </div>
+
+</script>

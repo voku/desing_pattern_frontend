@@ -1,0 +1,53 @@
+<script type="text/x-handlebars" data-template-name="application">
+
+  <header class="header" role="banner">
+    <h1>Desing Pattern</h1>
+  </header>
+
+  <!-- Page Layout here -->
+  <div class="row">
+
+    <section class="sidebar col s12 l3">
+      <div role="navigation">
+        <ul id="slide-out" class="side-nav fixed">
+          <li>
+            <a href="#/patterns" title="">
+              <span>"Overview"</span>
+            </a>
+          </li>
+          {{#each item in model}}
+            <li>
+              <a href="#/pattern/{{item.shortcut}}" title="{{item.currentLang.name}}">
+                <span>{{item.currentLang.name}}</span>
+              </a>
+            </li>
+          {{/each}}
+        </ul>
+        <ul id="slide-out" class="side-nav">
+          <li>
+            <a href="#/patterns" title="">
+              <span>"Overview"</span>
+            </a>
+          </li>
+          {{#each item in model}}
+            <li>
+              <a href="#/pattern/{{item.shortcut}}" title="{{item.currentLang.name}}">
+                <span>{{item.currentLang.name}}</span>
+              </a>
+            </li>
+          {{/each}}
+        </ul>
+        <a href="#" data-activates="slide-out" class="js-button-collapse"><i class="mdi-navigation-menu"></i></a>
+      </div>
+    </section>
+
+    <main class="main col s12 l9" role="main">
+      <section class="content">
+        {{outlet}}
+      </section>
+      <footer class="footer" role="contentinfo"></footer>
+    </main>
+
+  </div>
+
+</script>

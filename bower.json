@@ -1,0 +1,13 @@
+{
+  "name": "Desing Pattern",
+  "version": "0.1",
+  "dependencies": {
+    "normalize-scss": "3.*",
+    "jquery": "2.*",
+    "ember-data": "~0.0.14",
+    "materialize": "~0.96"
+  },
+  "resolutions": {
+    "ember": "~1.11.3"
+  }
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"router.js","sources":["../js/router.js"],"names":["Ember","Router","extend","rootURL","App","map","this","resource","path"],"mappings":";;;;AAQAA,MAAMC,OAAOC,QACXC,QAAS,MAGXC,IAAIH,OAAOI,IAAI,WACbC,KAAKC,SAAS,YACdD,KAAKC,SAAS,WAAaC,KAAM"}
