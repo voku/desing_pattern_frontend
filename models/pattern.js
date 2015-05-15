@@ -5,7 +5,7 @@ App.Pattern = Ember.Object.extend({
 
 App.Pattern.reopenClass({
   all: function(pattern_name) {
-    return $.getJSON("../json/pattern.json").then(function(response) {
+    return $.getJSON("json/pattern.json").then(function(response) {
 
       // DEBUG
       //console.log('json.pattern ->');

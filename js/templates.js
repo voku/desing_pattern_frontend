@@ -238,6 +238,12 @@ Ember.TEMPLATES["application"] = Ember.HTMLBars.template((function() {
       dom.setAttribute(el6,"class","mdi-navigation-menu");
       dom.appendChild(el5, el6);
       dom.appendChild(el4, el5);
+      var el5 = dom.createTextNode("\n\n        ");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createElement("script");
+      var el6 = dom.createTextNode("\n          $(document).ready(function () {\n            $(\".js-button-collapse\").sideNav();\n          });\n        ");
+      dom.appendChild(el5, el6);
+      dom.appendChild(el4, el5);
       var el5 = dom.createTextNode("\n      ");
       dom.appendChild(el4, el5);
       dom.appendChild(el3, el4);
