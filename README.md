@@ -1,6 +1,9 @@
 Desing Pattern
 ===========
 
+Demo:
+http://voku.github.io/desing_pattern_frontend/
+
 Installation:
 
 1.) ```npm install```
