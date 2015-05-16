@@ -1,8 +1,6 @@
 <script type="text/x-handlebars" data-template-name="application">
 
-  <header class="header" role="banner">
-    <h1>Desing Pattern</h1>
-  </header>
+
 
   <!-- Page Layout here -->
   <div class="row">
@@ -48,10 +46,18 @@
     </section>
 
     <main class="main col s12 l9" role="main">
+
+      <header class="header col s12" role="banner">
+        <h1>Desing Pattern</h1>
+      </header>
+
       <section class="content">
         {{outlet}}
       </section>
-      <footer class="footer" role="contentinfo"></footer>
+
+      <footer class="footer" role="contentinfo">
+      </footer>
+
     </main>
 
   </div>

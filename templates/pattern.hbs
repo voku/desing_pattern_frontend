@@ -1,47 +1,56 @@
 <script type="text/x-handlebars" data-template-name="pattern">
 
-  <nav class="content-nav" id="contentNav">
-    <ul>
-      <li class="active">
-        <a href="#" role="button">todo</a>
-      </li>
-      <li>
-        <a href="#" role="button">todo</a>
-      </li>
-      <li>
-        <a href="#" role="button">todo</a>
-      </li>
-      <li>
-        <a href="#" role="button">todo</a>
-      </li>
-    </ul>
-  </nav>
+  <div class="row">
+    <div class="col s2">
+      <ul class="section table-of-contents pinned pattern-navi-pinned">
+        <li><a href="#pattern-purpose">Zweck</a></li>
+        <li><a href="#pattern-general">Allgmein</a></li>
+        <li><a href="#pattern-technically">Technisch</a></li>
+      </ul>
+    </div>
 
-  <div class="content-container">
-    <div class="content-text">
+    <div class="col s10">
       {{#each item in model}}
         <h2>{{item.currentLang.name}}</h2>
 
-        <p class="pattern-purpose">
+        <p id="pattern-purpose" class="js-scrollspy">
+          <h4>Zweck</h4>
           {{item.currentLang.purpose}}
         </p>
-        <p class="pattern-general">
+
+        <p id="pattern-general" class="js-scrollspy">
+          <h4>Allgmein</h4>
           {{item.currentLang.general}}
         </p>
-        <p class="pattern-technically">
+
+        <p id="pattern-technically" class="js-scrollspy">
+          <h4>Technisch</h4>
           {{item.currentLang.technically}}
         </p>
-        <p class="pattern-advantage">
+
+        <p id="pattern-advantage" class="js-scrollspy">
+          <h4>Vorteile</h4>
           {{item.currentLang.advantage}}
         </p>
-        <p class="pattern-disadvantage">
+
+        <p id="pattern-disadvantage" class="js-scrollspy">
+          <h4>Nachteile</h4>
           {{item.currentLang.disadvantage}}
         </p>
-        <p class="pattern-example">
+
+        <p id="pattern-example" class="js-scrollspy">
+          <h4>Beispiel</h4>
           {{item.currentLang.example}}
         </p>
+
       {{/each}}
     </div>
   </div>
+
+  <script>
+    $(document).ready(function () {
+      $('.js-scrollspy').scrollSpy();
+    });
+  </script>
 
 </script>

@@ -349,24 +349,13 @@ td, th {
  * Basic Styles
  */
 body {
-  background: color("grey", "darken-4");
-  font: 400 1em/1.4 sans-serif;
-  color: color("materialize-red", "lighten-2"); }
+  background: #fff; }
 
 header, main, footer {
   padding-left: 240px; }
   @media only screen and (max-width: 992px) {
     header, main, footer {
       padding-left: 0; } }
-
-h1, h2 {
-  font: 400 2.5em/1.4 'Sansita One', cursive;
-  color: color("materialize-red", "lighten-2");
-  margin: 0;
-  color: inherit; }
-
-h1 {
-  font-size: 1.5em; }
 
 [data-template-name] {
   display: block; }

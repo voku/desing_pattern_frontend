@@ -4,25 +4,16 @@
 
 body {
 	background: $secondary-color;
-  @include font-text;
 }
 
-header, main, footer {
+header,
+main,
+footer {
   padding-left: 240px;
 
   @media only screen and (max-width : 992px) {
     padding-left: 0;
   }
-}
-
-h1, h2 {
-	@include font-headine;
-	margin: 0;
-	color: inherit;
-}
-
-h1 {
-	font-size: 1.5em;
 }
 
 [data-template-name] {
