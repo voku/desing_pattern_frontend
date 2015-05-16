@@ -2,30 +2,34 @@
 
   <h1 class="content-headline" id="contentHeadline">Overview</h1>
 
-  <nav class="content-nav" id="contentNav">
-    <ul>
-      <li class="active">
-        <a href="#" role="button">todo</a>
-      </li>
-      <li>
-        <a href="#" role="button">todo</a>
-      </li>
-      <li>
-        <a href="#" role="button">todo</a>
-      </li>
-      <li>
-        <a href="#" role="button">todo</a>
-      </li>
-    </ul>
-  </nav>
+  <div id="js-pattern-overview" class="pattern-overview row">
 
-  <div class="content-container">
-    <div class="content-intro">
-      <p>
-        Foobar... Fugiat magni ea, quisquam dolorem. Et laudantium
-        veniam veritatis, facilis reiciendis iure accusamus? Obcaecati quisquam dolor inventore eveniet aliquid.
-      </p>
+    <div class="col s12">
+      <ul class="tabs">
+        {{#each model as |item index|}}
+          <li class="tab col s3">
+            <a href="#tab{{index}} " title="{{item.currentLang.name}}">
+              <span>{{item.currentLang.name}}</span>
+            </a>
+          </li>
+        {{/each}}
+      </ul>
     </div>
+
+    <br class="clearfix" />
+    <br />
+
+    {{#each model as |item index|}}
+      <div id="tab{{index}}" class="col s12 m10 l8">
+        {{item.currentLang.general}}
+      </div>
+    {{/each}}
   </div>
+
+  <script>
+    $(document).ready(function(){
+      $('#js-pattern-overview .tabs').tabs();
+    });
+  </script>
 
 </script>
