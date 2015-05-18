@@ -349,7 +349,8 @@ td, th {
  * Basic Styles
  */
 body {
-  background: #fff; }
+  background: #fff;
+  height: 100.1%; }
 
 header, main, footer {
   padding-left: 240px; }
