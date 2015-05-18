@@ -57,6 +57,15 @@ App.PatternController = Ember.Controller.extend({
   */
 });;
 
+App.PatternView = Ember.View.extend({
+  didInsertElement: function() {
+    Ember.run.schedule('afterRender', this, function() {
+      this.$('.js-scrollspy').scrollSpy();
+      this.$('.js-collapsible').collapsible();
+    })
+  }
+});;
+
 App.Pattern = Ember.Object.extend({
 
 });

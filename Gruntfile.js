@@ -102,6 +102,7 @@ module.exports = function(grunt) {
           'js/router.js',
           'routes/*.js',
           'controllers/*.js',
+          'views/*.js',
           'models/*.js'
         ],
         dest: 'js/app.pkgd.js'

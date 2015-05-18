@@ -3,121 +3,54 @@
   <div class="row patten-single-page">
     <div class="col s2">
       <ul class="section table-of-contents pinned pattern-navi-pinned">
-        <li><a href="#pattern-purpose">Zweck</a></li>
         <li><a href="#pattern-general">Allgmein</a></li>
+        <li><a href="#pattern-purpose">Zweck</a></li>
         <li><a href="#pattern-technically">Technisch</a></li>
       </ul>
     </div>
 
     <div class="col s10">
-      <ul class="js-collapsible collapsible" data-collapsible="accordion">
+      {{#each item in model}}
 
-        {{#each item in model}}
+       <h2>{{item.currentLang.name}}</h2>
 
-          <li class="patten-single-page--pagttern-general">
-            <div class="collapsible-header">
-              <i class="mdi-action-label"></i>
-              <h4>{{item.currentLang.name}}</h4>
-            </div>
-            <div class="collapsible-body">
-              <p id="pattern-general" class="js-scrollspy">
-                <h4>Allgmein</h4>
-                {{item.currentLang.general}}
-              </p>
-            </div>
-          </li>
+       <p id="pattern-general" class="js-scrollspy">
+          <h4>Allgmein</h4>
+          {{item.currentLang.general}}
+        </p>
 
-          <li>
-            <div class="collapsible-header">
-              <i class="mdi-action-label-outline"></i>
-              <h4>Zweck</h4>
-            </div>
-            <div class="collapsible-body">
-              <p id="pattern-purpose" class="js-scrollspy">
-                <h4>Zweck</h4>
-                {{item.currentLang.purpose}}
-              </p>
-            </div>
-          </li>
+        <p id="pattern-purpose" class="js-scrollspy">
+          <h4>Zweck</h4>
+          {{item.currentLang.purpose}}
+        </p>
 
-          <li>
-            <div class="collapsible-header">
-              <i class="mdi-action-label-outline"></i>
-              <h4>Technisch</h4>
-            </div>
-            <div class="collapsible-body">
-              <p id="pattern-technically" class="js-scrollspy">
-                <h4>Technisch</h4>
-                {{item.currentLang.technically}}
-              </p>
-            </div>
-          </li>
+        <p id="pattern-technically" class="js-scrollspy">
+          <h4>Technisch</h4>
+          {{item.currentLang.technically}}
+        </p>
 
-          <li>
-            <div class="collapsible-header">
-              <i class="mdi-action-label-outline"></i>
-              <h4>Vorteile</h4>
-            </div>
-            <div class="collapsible-body">
-              <p id="pattern-advantage" class="js-scrollspy">
-                <h4>Vorteile</h4>
-                {{item.currentLang.advantage}}
-              </p>
-            </div>
-          </li>
+        <p id="pattern-advantage" class="js-scrollspy">
+          <h4>Vorteile</h4>
+          {{item.currentLang.advantage}}
+        </p>
 
-          <li>
-            <div class="collapsible-header">
-              <i class="mdi-action-label-outline"></i>
-              <h4>Nachteile</h4>
-            </div>
-            <div class="collapsible-body">
-              <p id="pattern-disadvantage" class="js-scrollspy">
-                <h4>Nachteile</h4>
-                {{item.currentLang.disadvantage}}
-              </p>
-            </div>
-          </li>
+        <p id="pattern-disadvantage" class="js-scrollspy">
+          <h4>Nachteile</h4>
+          {{item.currentLang.disadvantage}}
+        </p>
 
-          <li>
-            <div class="collapsible-header">
-              <i class="mdi-action-label-outline"></i>
-              <h4>Nachteile</h4>
-            </div>
-            <div class="collapsible-body">
-              <p id="pattern-disadvantage" class="js-scrollspy">
-                <h4>Nachteile</h4>
-                {{item.currentLang.disadvantage}}
-              </p>
-            </div>
-          </li>
+        <p id="pattern-disadvantage" class="js-scrollspy">
+          <h4>Nachteile</h4>
+          {{item.currentLang.disadvantage}}
+        </p>
 
-          <li>
-            <div class="collapsible-header">
-              <i class="mdi-action-label-outline"></i>
-              <h4>Beispiel</h4>
-            </div>
-            <div class="collapsible-body">
-              <p id="pattern-example" class="js-scrollspy">
-                <h4>Beispiel</h4>
-                {{item.currentLang.example}}
-              </p>
-            </div>
-          </li>
+        <p id="pattern-example" class="js-scrollspy">
+          <h4>Beispiel</h4>
+          {{item.currentLang.example}}
+        </p>
 
-        {{/each}}
-      </ul>
+      {{/each}}
     </div>
   </div>
-
-  <script>
-    $(document).ready(function () {
-      $('.js-scrollspy').scrollSpy();
-
-      $('.js-collapsible').collapsible({
-        accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
-      });
-    });
-  </script>
 
 </script>

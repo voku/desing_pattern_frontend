@@ -10471,9 +10471,11 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 /**
  * Basic Styles
  */
-body {
-  background: #fff;
+html {
   height: 100.1%; }
+
+body {
+  background: #fff; }
 
 header, main, footer {
   padding-left: 240px; }
