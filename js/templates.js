@@ -134,7 +134,7 @@ Ember.TEMPLATES["application"] = Ember.HTMLBars.template((function() {
       var el1 = dom.createElement("script");
       dom.setAttribute(el1,"type","text/x-handlebars");
       dom.setAttribute(el1,"data-template-name","application");
-      var el2 = dom.createTextNode("\n\n\n\n  ");
+      var el2 = dom.createTextNode("\n\n  ");
       dom.appendChild(el1, el2);
       var el2 = dom.createComment(" Page Layout here ");
       dom.appendChild(el1, el2);
@@ -222,12 +222,6 @@ Ember.TEMPLATES["application"] = Ember.HTMLBars.template((function() {
       dom.setAttribute(el5,"class","js-button-collapse");
       var el6 = dom.createElement("i");
       dom.setAttribute(el6,"class","mdi-navigation-menu");
-      dom.appendChild(el5, el6);
-      dom.appendChild(el4, el5);
-      var el5 = dom.createTextNode("\n\n        ");
-      dom.appendChild(el4, el5);
-      var el5 = dom.createElement("script");
-      var el6 = dom.createTextNode("\n          $(document).ready(function () {\n            $(\".js-button-collapse\").sideNav();\n          });\n        ");
       dom.appendChild(el5, el6);
       dom.appendChild(el4, el5);
       var el5 = dom.createTextNode("\n      ");
@@ -323,7 +317,7 @@ Ember.TEMPLATES["pattern"] = Ember.HTMLBars.template((function() {
     return {
       isHTMLBars: true,
       revision: "Ember@1.11.3",
-      blockParams: 0,
+      blockParams: 2,
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
@@ -427,24 +421,6 @@ Ember.TEMPLATES["pattern"] = Ember.HTMLBars.template((function() {
         var el1 = dom.createTextNode("\n\n        ");
         dom.appendChild(el0, el1);
         var el1 = dom.createElement("p");
-        dom.setAttribute(el1,"id","pattern-disadvantage");
-        dom.setAttribute(el1,"class","js-scrollspy");
-        var el2 = dom.createTextNode("\n          ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("h4");
-        var el3 = dom.createTextNode("Nachteile");
-        dom.appendChild(el2, el3);
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n          ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createComment("");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n        ");
-        dom.appendChild(el1, el2);
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n\n        ");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createElement("p");
         dom.setAttribute(el1,"id","pattern-example");
         dom.setAttribute(el1,"class","js-scrollspy");
         var el2 = dom.createTextNode("\n          ");
@@ -464,9 +440,9 @@ Ember.TEMPLATES["pattern"] = Ember.HTMLBars.template((function() {
         dom.appendChild(el0, el1);
         return el0;
       },
-      render: function render(context, env, contextualElement) {
+      render: function render(context, env, contextualElement, blockArguments) {
         var dom = env.dom;
-        var hooks = env.hooks, content = hooks.content;
+        var hooks = env.hooks, set = hooks.set, content = hooks.content;
         dom.detectNamespace(contextualElement);
         var fragment;
         if (env.useFragmentCache && dom.canClone) {
@@ -491,15 +467,15 @@ Ember.TEMPLATES["pattern"] = Ember.HTMLBars.template((function() {
         var morph4 = dom.createMorphAt(dom.childAt(fragment, [9]),3,3);
         var morph5 = dom.createMorphAt(dom.childAt(fragment, [11]),3,3);
         var morph6 = dom.createMorphAt(dom.childAt(fragment, [13]),3,3);
-        var morph7 = dom.createMorphAt(dom.childAt(fragment, [15]),3,3);
+        set(env, context, "item", blockArguments[0]);
+        set(env, context, "index", blockArguments[1]);
         content(env, morph0, context, "item.currentLang.name");
         content(env, morph1, context, "item.currentLang.general");
         content(env, morph2, context, "item.currentLang.purpose");
         content(env, morph3, context, "item.currentLang.technically");
         content(env, morph4, context, "item.currentLang.advantage");
         content(env, morph5, context, "item.currentLang.disadvantage");
-        content(env, morph6, context, "item.currentLang.disadvantage");
-        content(env, morph7, context, "item.currentLang.example");
+        content(env, morph6, context, "item.currentLang.example");
         return fragment;
       }
     };
@@ -554,6 +530,33 @@ Ember.TEMPLATES["pattern"] = Ember.HTMLBars.template((function() {
       dom.appendChild(el6, el7);
       dom.appendChild(el5, el6);
       dom.appendChild(el4, el5);
+      var el5 = dom.createTextNode("\n        ");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createElement("li");
+      var el6 = dom.createElement("a");
+      dom.setAttribute(el6,"href","#pattern-advantage");
+      var el7 = dom.createTextNode("Vorteile");
+      dom.appendChild(el6, el7);
+      dom.appendChild(el5, el6);
+      dom.appendChild(el4, el5);
+      var el5 = dom.createTextNode("\n        ");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createElement("li");
+      var el6 = dom.createElement("a");
+      dom.setAttribute(el6,"href","#pattern-disadvantage");
+      var el7 = dom.createTextNode("Nachteile");
+      dom.appendChild(el6, el7);
+      dom.appendChild(el5, el6);
+      dom.appendChild(el4, el5);
+      var el5 = dom.createTextNode("\n        ");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createElement("li");
+      var el6 = dom.createElement("a");
+      dom.setAttribute(el6,"href","#pattern-example");
+      var el7 = dom.createTextNode("Beispiel");
+      dom.appendChild(el6, el7);
+      dom.appendChild(el5, el6);
+      dom.appendChild(el4, el5);
       var el5 = dom.createTextNode("\n      ");
       dom.appendChild(el4, el5);
       dom.appendChild(el3, el4);
@@ -600,7 +603,7 @@ Ember.TEMPLATES["pattern"] = Ember.HTMLBars.template((function() {
         fragment = this.build(dom);
       }
       var morph0 = dom.createMorphAt(dom.childAt(fragment, [0, 1, 3]),1,1);
-      block(env, morph0, context, "each", [get(env, context, "model")], {"keyword": "item"}, child0, null);
+      block(env, morph0, context, "each", [get(env, context, "model")], {}, child0, null);
       return fragment;
     }
   };
@@ -665,7 +668,7 @@ Ember.TEMPLATES["patterns"] = Ember.HTMLBars.template((function() {
         var morph0 = dom.createMorphAt(dom.childAt(element1, [1]),0,0);
         set(env, context, "item", blockArguments[0]);
         set(env, context, "index", blockArguments[1]);
-        attribute(env, attrMorph0, element1, "href", concat(env, ["#tab", get(env, context, "index"), " "]));
+        attribute(env, attrMorph0, element1, "href", concat(env, ["#tab", get(env, context, "index")]));
         attribute(env, attrMorph1, element1, "title", concat(env, [get(env, context, "item.currentLang.name")]));
         content(env, morph0, context, "item.currentLang.name");
         return fragment;
@@ -783,12 +786,6 @@ Ember.TEMPLATES["patterns"] = Ember.HTMLBars.template((function() {
       var el3 = dom.createComment("");
       dom.appendChild(el2, el3);
       var el3 = dom.createTextNode("  ");
-      dom.appendChild(el2, el3);
-      dom.appendChild(el1, el2);
-      var el2 = dom.createTextNode("\n\n  ");
-      dom.appendChild(el1, el2);
-      var el2 = dom.createElement("script");
-      var el3 = dom.createTextNode("\n    $(document).ready(function(){\n      $('#js-pattern-overview .tabs').tabs();\n    });\n  ");
       dom.appendChild(el2, el3);
       dom.appendChild(el1, el2);
       var el2 = dom.createTextNode("\n\n");

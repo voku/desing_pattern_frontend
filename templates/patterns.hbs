@@ -8,7 +8,7 @@
       <ul class="tabs">
         {{#each model as |item index|}}
           <li class="tab col s3">
-            <a href="#tab{{index}} " title="{{item.currentLang.name}}">
+            <a href="#tab{{index}}" title="{{item.currentLang.name}}">
               <span>{{item.currentLang.name}}</span>
             </a>
           </li>
@@ -25,11 +25,5 @@
       </div>
     {{/each}}
   </div>
-
-  <script>
-    $(document).ready(function(){
-      $('#js-pattern-overview .tabs').tabs();
-    });
-  </script>
 
 </script>

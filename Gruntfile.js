@@ -78,8 +78,8 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         options: {
-          loadPath: ['vendor/bower/normalize-scss'],
-          sourceMap: true
+          includePaths: ['vendor/bower/normalize-scss'],
+          sourcemap: true
         },
         files: [{
           expand: true,

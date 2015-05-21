@@ -10496,7 +10496,7 @@ header, main, footer {
  * Sidebar
  */
 i.mdi-navigation-menu {
-  color: white;
+  color: black;
   font-size: 30px; }
 
 /**
@@ -10509,4 +10509,5 @@ i.mdi-navigation-menu {
   font-weight: bold; }
 .patten-single-page .pattern-navi-pinned {
   right: 10px; }
+
 /*# sourceMappingURL=app.css.map */

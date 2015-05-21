@@ -57,11 +57,26 @@ App.PatternController = Ember.Controller.extend({
   */
 });;
 
+App.ApplicationView = Ember.View.extend({
+  didInsertElement: function() {
+    Ember.run.schedule('afterRender', this, function() {
+      this.$(".js-button-collapse").sideNav();
+    })
+  }
+});;
+
 App.PatternView = Ember.View.extend({
   didInsertElement: function() {
     Ember.run.schedule('afterRender', this, function() {
       this.$('.js-scrollspy').scrollSpy();
-      this.$('.js-collapsible').collapsible();
+    })
+  }
+});;
+
+App.PatternsView = Ember.View.extend({
+  didInsertElement: function() {
+    Ember.run.schedule('afterRender', this, function() {
+      this.$('#js-pattern-overview .tabs').tabs();
     })
   }
 });;
